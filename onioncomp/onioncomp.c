@@ -5,7 +5,7 @@
 
 int main(int argc, char** argv) {
   if(argc != 3) {
-    printf("Usage: %s [input german file] [output file]\n", argv[0]);
+    printf("Usage: %s [input onionpudding file] [output file]\n", argv[0]);
     exit(0);
   }
   FILE* input;
@@ -32,14 +32,14 @@ int main(int argc, char** argv) {
   for(int i = 0; i < size; i++)
     inputarray[i] = fgetc(input);
   int j = 0;
-  for(int i = 0; i < size - 9; i++) {
-    if(toupper(inputarray[i]) == 'B' && (toupper(inputarray[i + 1]) == 'E' || toupper(inputarray[i + 1]) == 'I') && toupper(inputarray[i + 2]) == 'E' && toupper(inputarray[i + 3]) == 'R') {
+  for(int i = 0; i < size - 7; i++) {
+    if(toupper(inputarray[i]) == 'P' && toupper(inputarray[i + 1]) == 'U' && toupper(inputarray[i + 2]) == 'D' && toupper(inputarray[i + 3]) == 'D' && toupper(inputarray[i + 4]) == 'I' && toupper(inputarray[i + 5]) == 'N' && toupper(inputarray[i + 6]) == 'G') {
       c |= (1 << (7 - j));
-      i+=4;
+      i+=7;
       j++;
     }
-    else if(toupper(inputarray[i]) == 'S' && toupper(inputarray[i + 1]) == 'C' && toupper(inputarray[i + 2]) == 'H' && toupper(inputarray[i + 3]) == 'N' && toupper(inputarray[i + 4]) == 'I' && toupper(inputarray[i + 5]) == 'T' && toupper(inputarray[i + 6]) == 'Z' && toupper(inputarray[i + 7]) == 'E' && toupper(inputarray[i + 8]) == 'L') {
-      i+=9;
+    else if(toupper(inputarray[i]) == 'O' && toupper(inputarray[i + 1]) == 'N' && toupper(inputarray[i + 2]) == 'I' && toupper(inputarray[i + 3]) == 'O' && toupper(inputarray[i + 4]) == 'N') {
+      i+=5;
       j++;
     }
     if(j == 8)  {

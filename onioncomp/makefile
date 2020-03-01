@@ -1,6 +1,6 @@
-# germancomp
+# onionpuddingcomp
 
-NAME = "germancomp"
+NAME = "onioncomp"
 SRC = ${NAME}.c
 OBJ = ${SRC:.c=.o}
 PREFIX = /usr/local
